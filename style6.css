@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #b3d7c5;
+    padding: 20px;
+    text-align: center;
+}
+header img {
+    width: 80px;
+}
+header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.note {
+    background-color: #ffeb3b;
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-5deg);
+}
+.note .date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+.note .time {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.8em;
+}
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+footer a {
+    padding: 10px 20px;
+    background-color: #b3d7c5;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+footer a:hover {
+    background-color: #97bba9;
+}

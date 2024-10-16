@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total de Presenças e Faltas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #a0d6b4;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        header p {
+            margin: 5px 0;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .chart-container {
+            width: 300px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #a0d6b4;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .voltar-button {
+            background-color: #b4cfcf;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .voltar-button:hover {
+            background-color: #96b8b8;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="imagem/WhatsApp Image 2024-10-09 at 09.59.59.jpeg" alt="Logo" width="100px">
+    <h1>Total de Presenças e Faltas</h1>
+    <p>Secretaria.sesi<br>Secretaria<br>secretaria.@gmail.com</p>
+</header>
+
+<main>
+    <div class="chart-container">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+    <a href="index3.html"><button class="voltar-button" onclick="window.history.back()">Voltar</button></a>
+</main>
+
+<footer>
+    <p>&copy; 2024 Secretaria.sesi</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Presenças', 'Faltas'],
+            datasets: [{
+                label: 'Total de Presenças e Faltas',
+                data: [80, 20],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(255, 99, 132, 0.7)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    enabled: true
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
